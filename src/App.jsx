@@ -1,17 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Background } from './components/background.jsx' ;
+import { Foreground } from './components/Foreground.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    <div className=' flex bg-red-500 '>
-dshadhasgy
-    </div>
-    </>
+<div className=' relative w-full h-screen bg-zinc-800 '>
+<Background/>
+<Foreground/>
+
+
+</div>
   )
 }
 

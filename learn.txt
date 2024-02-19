@@ -1,0 +1,51 @@
+
+two components banane hai
+background
+foreground=>iske andar card aaega  state data load into foreground
+
+CSS
+leading none=>it decrease extra line height
+translate-x=>translate elemet from x axis khiska degi element ko
+translate-y=>translate elemet from y axis khska degi eelemet ko
+
+::selection
+The ::selection CSS pseudo-element applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).
+bg-sky-800/50=>/ means transparency manage karna 
+
+size=>it is parameter use to increase size of icons
+<HiDownload size={} />
+
+Fixed=>Use fixed to position an element relative to the browser window.
+Dynamic classes=>
+<div className={`w-full py-4 flex items-center justify-center bg-${data?.tag?.tagColor}-500`}>
+    </div>
+    <div>
+className={`w-full py-4 flex items-center justify-center ${data?.tag?.tagColor=="blue"?"bg-blue-600":"bg-blue-500"}-500`}</div>
+
+
+dragging
+framer-motion
+use motion for make dragable
+dragConstraints=>drag me jo value hai cueent element ko drag karne par woh us value se bahar nhi jaega
+whileDrag={ {scale:1.2}} =>jab dag kar rhe ho then size 1.2 kardo
+
+<motion.div drag dragConstraints={reference} whileDrag={ {scale:1.2}}  >
+</motion.div>
+https://www.framer.com/motion/scroll-animations/
+
+
+
+REACT
+const ref=useRef(null);
+<div ref={ref} className=' fixed top-0 left-0 z-[3] w-full h-full flex gap-10 flex-wrap p-5 '>
+
+
+{/* <Card/> */}
+{data.map((el,idx)=>{
+return <Card data={el} key={idx} reference={ref}/>
+})}
+
+  
+</div>
+
+yahan par ref me cueent div ka refrence aa jaega
